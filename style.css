@@ -1,0 +1,127 @@
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    height: 95vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 80%;
+    border-radius: 5px;
+}
+
+.container div {
+    padding: 30px;
+    text-align: left;
+    height: calc(100% / 3);
+}
+
+.container div img {
+    width: 40px;
+}
+
+.container div h2 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+
+}
+
+.container div p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.container div button {
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    mix-blend-mode: screen;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.container .sedans button:hover {
+    color: hsl(0, 0%, 95%);
+    outline: 2px solid hsl(0, 0%, 95%);
+    background-color: hsl(31, 77%, 52%);
+    mix-blend-mode: normal;
+}
+
+.container .suvs button:hover {
+    color: hsl(0, 0%, 95%);
+    outline: 2px solid hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+    mix-blend-mode: normal;
+}
+
+.container .luxury button:hover {
+    color: hsl(0, 0%, 95%);
+    outline: 2px solid hsl(0, 0%, 95%);
+    background-color: hsl(179, 100%, 13%);
+    mix-blend-mode: normal;
+}
+
+/* First square */
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+/* Second square */
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+/* Third square */
+.luxury {
+    background-color: #004241;
+}
+
+@media (min-width: 610px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        overflow-y: hidden;
+    }
+
+    .container div {
+        height: 100%;
+    }
+
+    .container div button {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 70%;
+    }
+    
+    .container div p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .container div img {
+        width: 60px;
+    }
+
+    .container div h2 {
+        font-size: 30px;
+    }
+
+    .container div button {
+        width: 120px;
+        font-size: 14px;
+        margin: 80px 0 0 0;
+    }
+}
